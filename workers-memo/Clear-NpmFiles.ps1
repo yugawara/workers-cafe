@@ -1,4 +1,2 @@
-function Clear-NpmFiles{
-    remove-item -force -recurse "$env:APPDATA\Local\npm-cache\"
-    remove-item -force -recurse "$env:APPDATA\Roaming\\npm"
-}
+remove-item -force -recurse "$env:LOCALAPPDATA\npm-cache\"
+remove-item -force -recurse "$env:APPDATA\npm\"
