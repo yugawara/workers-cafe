@@ -9,9 +9,7 @@ In Windows 10, just following the standard instructions were not enough. The fol
 .\node_modules\.bin\cypress.cmd install --force
 $env:NODE_OPTIONS="--openssl-legacy-provider" 
 ```
-> Assignment of $env from command-line 
-> probaly would only work if terminal is run as Administrator.
-> An alternative is to use the GUI to permanently modify environmental variable
+> To permanently modify environmental variable:
 > ```Powershell
 > rundll32.exe sysdm.cpl,EditEnvironmentVariables.
 > ```
