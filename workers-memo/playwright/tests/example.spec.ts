@@ -8,9 +8,13 @@ test('homepage has Playwright in title and get started link linking to the intro
 
   // create a locator
   const getStarted = page.getByText('Get Started');
+  const star = page.getByRole('link', { name: 'Star microsoft/playwright on GitHub' })
+  page.locator("text=modern")
+  page.locator("text=star")
 
   // Expect an attribute "to be strictly equal" to the value.
   await expect(getStarted).toHaveAttribute('href', '/docs/intro');
+  await expect(star).toHaveCount(1)
 
   // Click the get started link.
   await getStarted.click();
